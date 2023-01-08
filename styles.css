@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500&display=swap');
+/* css reset */
+:root {
+    --afterClr: #000;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,h2,h3,h4,h5,p,
+figure, picture {
+    margin: 0;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+h2
+{
+    font-weight: 400;
+}
+
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+.sr-only {   
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+.fw-500 {
+    font-weight: 500;
+}
+.fw-700 {
+    font-weight: 700;
+    font-size: 30px ;
+}
+
+ul li {
+    list-style: none;
+    min-width: max-content;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+.ff-Poppins {
+    font-family: 'Poppins', cursive;
+}
+.ff-Baloo {
+    font-family: 'Baloo Da 2', cursive;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+.fw-500 {
+    font-weight: 500;
+}
+.fw-600 {
+    font-weight: 600;
+}
+
+.underline::after {
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 2px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -10px;
+    background-color: var(--afterClr);
+    border-radius: 10rem;
+}
+.background-position {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ------------------------------- */
+
+p {
+    font-family: 'Baloo Da 2', cursive;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', cursive;
+    text-align: center;
+}
+
+body {
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* logo */
+.logo a {
+    color: #d129c8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* intro__section */
+.intro__section {
+    position: relative;
+    padding-inline: 1em;
+    background-image: url(assets/Featured-1-scaled.jpg);
+    display: flex;
+    flex-direction: column;
+    min-height: 110vh;
+}
+.intro__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.intro__section .intro__img{
+    display: grid;
+    place-items: center;
+}
+.intro__section img {
+    width: 60%;
+    max-width: 650px;
+}
+@media (min-width: 30em) {
+    .intro__section img {
+        width: 40%;
+    }
+}
+
+.intro__section  h1 {
+    text-transform: uppercase;
+    font-size: 2.125rem;
+    letter-spacing: 2.5px;
+    text-shadow: 3px 3px 5px #000;
+}
+.intro__section  p {
+    --flow-space: 0.5rem;
+    text-align: center;
+    font-size: .9rem;
+    letter-spacing: 2.5px;
+}
+
+/* about section */
+.about__section {
+    --afterClr: #fff;
+    position: relative;
+    display: grid;
+    place-items: center;
+    gap: 3rem;
+    padding: 0 1.5em 5.125em 1.5em;
+    background-image: linear-gradient(180deg, #032575 0%, #032575 100%);
+}
+.about__section h2,
+.event__section h2,
+.speakers__section h2,
+.event-gallery__section h2 {
+    font-size: 1.68rem;
+    position: relative;
+    max-width: fit-content;
+}
+
+.about__section p {
+    font-size: clamp(0.8rem, 2vw, 1.375rem);
+    text-align: center;
+    max-width: 70ch;
+}
+
+
+/* event section */
+.event__section {
+    --flow-space: 4rem;
+    color: #000;
+    padding: 50px 20px;
+    background-image: url(assets/19366-scaled.jpg);
+}
+.event__section h2,
+.speakers__section h2,
+.event-gallery__section h2 {
+    margin-inline: auto;
+    font-size: clamp(1.875rem, 6.5vw, 3.125rem);
+}
+
+.event__section .talks {
+    max-width: 1100px;
+    margin-inline: auto;
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+}
+.event__section .talk {
+    --flow-space: 1.5rem;
+    padding: 2em;
+    text-align: center;
+    background-color: #fcfcfc;
+    border: 1px solid transparent;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .3);
+    transition: border-color 300ms;
+}
+.event__section .talk:hover {
+    border-color: #000FC1;
+}
+.event__section .talk h3 {
+    font-size: 1.875rem;
+}
+.event__section .talk p {
+    font-size: 0.95rem;
+    font-weight: 200;
+}
+
+
+/* speakers section */
+.speakers__section {
+    color: #000;
+    background-image: url(assets/17973908-scaled.jpg);
+}
+.speakers__section .speakers__heading {
+    padding-block: 1.5em;
+    background-image: url(assets/17973908-scaled.jpg);
+}
+
+.speakers__section .speakers {
+    padding: 1.875em;
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
+}
+.speaker {
+    padding: 1.5em;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow:  0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.speaker .profile {
+    display: grid;
+    place-items: center;
+}
+.speaker .profile img {
+    width: 95px;
+    border-radius: 70% 50% 60% 40%;
+    transition: transform 300ms;
+}
+.speaker .profile img:hover {
+    transform: scale(1.1);
+}
+.speaker_discription h3 {
+    font-weight: 700;
+    font-family: 'Baloo Da 2';
+    font-size: 1rem;
+}
+.speaker_discription p {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.15em;
+}
+
+
+/* slide gallery */
+.event-gallery__section {
+    --flow-space: 5rem;
+    --afterClr: #fff;
+    padding: 2em;
+    padding-bottom: 5em;
+    background-image: url(assets/25552-scaled.jpg);
+}
+.swiper {
+    width: 80%;
+    aspect-ratio: 2/1;
+}
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #fff !important;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+}
+.swiper-pagination-bullet-active {
+    background-color: #fff !important;
+}
+.event-gallery__section .container {
+    position: relative;
+}
+.swiper-pagination {
+    bottom: -3rem !important;
+}
+
+/* footer */
+footer {
+    padding: 4em 2em;
+    position: relative;
+    background-image: url(assets/ieee_footer.jpg);
+}
+
+footer .overlay {
+    background-color: #0c3c54;
+    opacity: .9;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+footer .container {
+    --gap: 2rem;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+footer .left {
+    --gap: 0;
+    flex-direction: column;
+    align-items: center;
+}
+footer .left > * {
+    font-weight: 300;
+}
+
+footer .left h2 {
+    font-size: 1.25rem;
+}
+footer .left p {
+    color: #FEF0E3;
+    word-spacing: 3px;
+    max-width: 60ch;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.875rem;
+    text-align: center;
+}
+footer .left button {
+    cursor: pointer;
+    margin-top: 2rem;
+    max-width: fit-content;
+    font-family: 'Poppins';
+    font-size: 15px;
+    font-weight: 300;
+    padding: .7em 1.8em;
+    color: #fff;
+    background-color: #2F6793;
+    border: 0;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    transition: transform 300ms;
+}
+footer .left button:hover {
+    transform: scale(1.1);
+}
+
+footer .right {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.email-address {
+    text-decoration: underline;
+    font-size: 0.8rem !important; 
+    font-weight: 300;
+}
+
+footer .right .socials__container{
+    --gap: 0;
+    flex-direction: column;
+    align-items: center;
+}
+footer .right .socials__container p {
+    font-size: 1.2rem;
+}
+footer .right .socials .fb {
+    color: #0165E1;
+}
+footer .right .socials .yt{
+    color: red;
+}
+footer .right .socials .tw{
+    color: #1DA1F2;
+}
+footer .right .socials .insta{
+    color: #8a3ab9;
+}
+footer .right .socials .linkd{
+    color: #0072b1;
+}
+footer .right .socials i {
+    transition: opacity 200ms;
+}
+footer .right .socials i:hover {
+    opacity: .9;
+}
+
+footer .right .google-maps__container {
+    width: 80%;
+    aspect-ratio: 4/1;
+}
+footer .right .google-maps__container iframe{
+    width: 100%;
+    height: 100%;
+}
+
+/* tab and desktop view */
+@media screen and (min-width: 48em) {
+    .intro__section {
+        min-height: 140vh;
+    }
+    .intro__section  h1 {
+        font-size: 4.375rem;
+    }
+    .intro__section  p {
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+
+    .about__section h2,
+    .event__section h2,
+    .speakers__section h2,
+    .event-gallery__section h2 {
+        font-size: 3.125rem;
+    }
+    .speakers__section h2 {
+        font-weight: 500;
+    }
+    .about__section p {
+        max-width: 72ch;
+    }
+
+    .event__section .talks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .talks > * {
+        height: 100%;
+    }
+
+    .speaker .profile img {
+        width: 150px;
+        place-self: start;
+    }
+    .speaker_discription > * {
+        text-align: start;
+    }
+    .speaker_discription p {
+        margin-top: .5rem;
+        max-width: 90ch;
+    }
+
+    footer .container {
+        flex-direction: row;
+    }
+    footer .left {
+        --gap: .5rem;
+        align-items: flex-start;
+    }
+    footer .left p {
+        max-width: unset;
+        text-align: start;
+    }
+    footer .left button {
+        margin-top: 1rem;
+    }
+    footer .right .google-maps__container {
+        width: 70%;
+        aspect-ratio: 16/10;
+        order: 0;
+    }
+    footer .right .socials__container {
+        --gap: .6rem;
+        order: 1;
+    }
+
+}
+
+@media screen and (min-width: 64em) {
+    .background-position:not(footer) {
+        background-attachment: fixed;
+    }
+
+    .about__section {
+        gap: 4.5rem;
+        padding: 0 6em 6em 6em;
+    }
+    .about__section p {
+        font-size: .9375rem;
+        max-width: unset;
+    }
+
+    .speakers__section .speakers {
+        padding-top: 3em;
+        padding-bottom: 6em;
+        display: grid;
+        column-gap: 4rem;
+        grid-template-columns: 1fr 1fr;
+    }
+    .speaker {
+        display: flex;
+        gap: 1rem;
+        height: 100%;
+    }
+    .speaker .profile img {
+        width: 300px;
+    }
+    .speakers__section .speakers__heading {
+        background-image: none;
+    }
+}

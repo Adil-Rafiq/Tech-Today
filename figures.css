@@ -1,0 +1,30 @@
+.intro__section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: calc(150px - 15vw) solid #032575;
+    transform: rotate(180deg);
+}
+@media (min-width: 35em) {
+    .intro__section::after {
+        border-top: 8vw solid #032575;
+    }
+}
+
+.about__section::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    border-radius: 50% 50% 0 0;
+}
