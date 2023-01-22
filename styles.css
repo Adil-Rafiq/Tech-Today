@@ -131,11 +131,13 @@ h1, h2, h3 {
     font-family: 'Poppins', cursive;
     text-align: center;
 }
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
 body {
     color: #fff;
     min-height: 100vh;
-    overflow-x: hidden !important;
 }
 
 /* logo */
